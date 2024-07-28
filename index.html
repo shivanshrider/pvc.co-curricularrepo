@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Welcome</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet" />
+    <link href="css/common.css" rel="stylesheet" />
+    <link href="css/home.css" rel="stylesheet" />
+    <style>
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            padding-top: 60px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 600px;
+            text-align: center;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .modal-image {
+            width: 100%;
+            height: auto;
+            transition: transform 0.2s;
+        }
+
+        .modal-content:hover .modal-image {
+            transform: scale(1.1);
+        }
+
+        .modal-text {
+            margin-top: 15px;
+            font-size: 16px;
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="fade-images" class="responsive">
+        <img src="img/bg.png" alt="Nature" class="responsive">
+    </div>
+    <br>
+    <br>
+    <div class="body">
+        <div class="tabs">
+          <input
+            checked=""
+            value="HTML"
+            name="fav_language"
+            id="html"
+            type="radio"
+            class="input"
+          />
+          <label for="html" class="label" onclick="showContent('html-content')">Forms</label>
+          <input
+            value="CSS"
+            name="fav_language"
+            id="css"
+            type="radio"
+            class="input"
+          />
+          <label for="css" class="label" onclick="showContent('css-content')">Entities@CU</label>
+          <input
+            value="JavaScript"
+            name="fav_language"
+            id="javascript"
+            type="radio"
+            class="input"
+          />
+          <label for="javascript" class="label" onclick="showContent('js-content')">Guidelines</label>
+        </div>
+      
+        <div id="html-content" class="content active">
+            <br>
+            <br>
+            <section class="table__body">
+                <table>
+                    <thead>
+                        <tr>
+                            <th> S.No.<span class="icon-arrow">&UpArrow;</span></th>
+                            <th> Forms <span class="icon-arrow">&UpArrow;</span></th>
+                            <th> Description <span class="icon-arrow">&UpArrow;</span></th>
+                            <th> Status <span class="icon-arrow">&UpArrow;</span></th>
+                            <th> Last Updated <span class="icon-arrow">&UpArrow;</span></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="responsive">
+                            <td> 1 </td>
+                            <td>CU/PVC-AA/2024-25/DEL-COCUR/</td>
+                            <td> <img src="img/SECRETARY (1).png" alt="">Secretary/Joint-Sec Nomination</td>
+                            <td>
+                                <a href="documents/SecretaryJt Secretary .pdf" download>
+                                <p class="status delivered">Download</p>
+                            </td>
+                        </a>
+                            <td> 24 Jul, 2024 </td>
+                            
+                        </tr>
+                        <tr>
+                            <td> 2 </td>
+                            <td>CU/PVC-AA/2024-25/DEL-COCUR/ </td>
+                            <td><img src="img/SECRETARY (2).png" alt="">  Faculty/Co-faculty Nomination</td>
+                            <td>
+                                <a href="documents/FACULTYCO-FACULTY ADVISOR APPLICATION FORM.pdf" download>
+                                <p class="status delivered">Download</p>
+                            </td>
+                        </a>
+                            <td> 24 Jul, 2024</td>
+                           
+                        </tr>
+                        <tr>
+                            <td> 3</td>
+                            <td> CU/PVC-AA/2024-25/DEL-COCUR/ </td>
+                            <td><img src="img/SECRETARY (3).png" alt="">Chief Advisor/Member of Board </td>
+                            <td>
+                                <a href="documents/Entity .pdf" download>
+                                <p class="status delivered">Download</p>
+                            </td>
+                        </a>
+                            <td> 24 Jul, 2024 </td>
+                           
+                        </tr>
+                        <tr>
+                            <td> 3</td>
+                            <td>CU/PVC-AA/2024-25/DEL-COCUR/ </td>
+                            <td><img src="img/SECRETARY (3).png" alt=""> Entity Regestration  </td>
+                            <td>
+                                <a href="documents/Entity .pdf" download>
+                                <p class="status delivered">Download</p>
+                            </td>
+                        </a>
+                            <td> 24 Jul, 2024 </td>
+                           
+                        </tr>
+                        <tr>
+                            <td> 4</td>
+                            <td>CU/PVC-AA/2024-25/DEL-COCUR/</td>
+                            <td> <img src="img/SECRETARY (4).png" alt=""> Advisory Board Registration</td>
+                            <td>
+                                <a href="documents/Advisory board .pdf" download>
+                                <p class="status delivered">Download</p>
+                            </td>
+                        </a>
+                            <td> 24 Jul, 2024 </td>
+                           
+                        </tr>
+                        <tr>
+                            <td> 5</td>
+                            <td> CU/PVC-AA/2024-25/DEL-COCUR/</td>
+                            <td> <img src="img/SECRETARY (5).png" alt="">Club Nomination  </td>
+                            <td>
+                                <a href="documents/Proposal for Club Nomination Document.pdf" download>
+                                <p class="status delivered">Download</p>
+                            </td>
+                        </a>
+                            <td> 24 Jul, 2024 </td>
+                            
+                        </tr>
+                        <tr>
+                            <td> 7</td>
+                            <td>CU/PVC-AA/2024-25/DEL-COCUR/</td>
+                            <td><img src="img/SECRETARY (7).png" alt=""> Activity Approval Form </td>
+                            <td>
+                                <a href="documents/Approval Form -3.pdf" download>
+                                <p class="status delivered">Download</p>
+                            </td>
+                        </a>
+                            <td> 24 Jul, 2024 </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </div>
+        <br>
+        <br>
+        <div id="js-content" class="content">
+            <br>
+            <br>
+            <section class="table__body">
+                <table>
+                    <thead>
+                        <tr>
+                            <th> S.No.<span class="icon-arrow">&UpArrow;</span></th>
+                            <th> Guidelines <span class="icon-arrow">&UpArrow;</span></th>
+                            <th> Last Updated <span class="icon-arrow">&UpArrow;</span></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td> CU/PVC-AA/2024-25/DEL-COCUR/</td>
+                            <td><a href=""><img src="img/SECRETARY (1).png" alt="">Standard Operational Protocol for Student Secreatry/Joint-Secreatary</a></td>
+                            <td> 24 Jul, 2024 </td>
+                            
+                        </tr>
+                        <tr>
+                            <td> CU/PVC-AA/2024-25/DEL-COCUR/</td>
+                            <td><a href=""><img src="img/SECRETARY (2).png" alt="">Standard Operational Protocol for Faculty/Co-Faculty Advisor</a></td>
+                            <td> 24 Jul, 2024</td>
+                           
+                        </tr>
+                        <tr>
+                            <td> CU/PVC-AA/2024-25/DEL-COCUR/</td>
+                            <td><a href="documents/Delegation of Financial Power_PVC.pdf" download><img src="img/SECRETARY (3).png" alt=""> Deligation of Power </a></td>
+                            <td> 24 Jul, 2024 </td>
+                           
+                        </tr>
+                        <tr>
+                            <td> CU/PVC-AA/2024-25/DEL-COCUR/</td>
+                            <td><a href=""><img src="img/SECRETARY (4).png" alt="">Process for Activity/Events</a> </td>
+                            <td> 24 Jul, 2024 </td>
+                           
+                        </tr>
+                        <tr>
+                            <td> CU/PVC-AA/2024-25/DEL-COCUR/</td>
+                            <td><a href=""><img src="img/SECRETARY (5).png" alt=""> Assessment for GP Module </a> </td>
+                            <td> 24 Jul, 2024 </td>
+                            
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <br>
+            <div class="card">
+                <div class="container">
+                    <div class="left">
+                        <div class="status-ind">
+                            <div class="right">
+                                <div class="text-wrap">
+                                    <p class="text-content">
+                                        <a><b>For Queries:</b><br>Mail us at: <a href="mailto: cocurr.daa@cumail.in ">cocurr.daa@cumail.in </a> <br> <b>OR Contact</b> <br>&nbsp&nbsp&nbsp&nbsp Kunal- <a href="tel:+919896972272">+919896972272</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="css-content" class="content">
+            <div class="container-fluid">
+                <div class="row justify-content-center">
+                    <div class="col-md-4 d-flex justify-content-center">
+                        <div class="city-card3-container col-md">
+                            <div class="card3">
+                                <div class="card3-details">
+                                    <p class="text-title">CLUBS</p>
+                                    <p class="text-body">Here are the details of the Clubs</p>
+                                </div>
+                                <button class="card3-button" onclick="openExcel('documents/Clubs-data.xlsx')">More info</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 d-flex justify-content-center">
+                        <div class="city-card3-container col-md">
+                            <div class="card3">
+                                <div class="card3-details">
+                                    <p class="text-title">DEPARTMENTAL SOCIETIES</p>
+                                    <p class="text-body">Here are the details of the Societies</p>
+                                </div>
+                                <button class="card3-button" onclick="openExcel('documents/Deparmental Socities.xlsx')">More info</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-md-4 d-flex justify-content-center">
+                        <div class="city-card3-container col-md">
+                            <div class="card3">
+                                <div class="card3-details">
+                                    <p class="text-title">PROFESSIONAL SOCIETIES</p>
+                                    <p class="text-body">Here are the details of the Societies</p>
+                                </div>
+                                <button class="card3-button" onclick="openExcel('documents/ps.xlsx')">More info</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 d-flex justify-content-center">
+                        <div class="city-card3-container col-md">
+                            <div class="card3">
+                                <div class="card3-details">
+                                    <p class="text-title">COMMUNITY</p>
+                                    <p class="text-body">Here are the details of the Community</p>
+                                </div>
+                                <button class="card3-button" onclick="openExcel('documents/Community.xlsx')">More info</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="popup-overlay" class="popup-overlay"></div>
+        <div id="popup" class="popup">
+            <span id="close-popup" class="close-popup">&times;</span>
+            <div id="popup-content"></div>
+        </div>
+        
+        <!-- Include the xlsx library -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
+        
+        <script>
+        function openExcel(file) {
+            fetch(file)
+                .then(response => response.arrayBuffer())
+                .then(data => {
+                    const workbook = XLSX.read(data, {type: 'array'});
+                    const sheetName = workbook.SheetNames[0];
+                    const sheet = workbook.Sheets[sheetName];
+                    const html = XLSX.utils.sheet_to_html(sheet);
+                    document.getElementById('popup-content').innerHTML = html;
+                    document.getElementById('popup-overlay').style.display = 'block';
+                    document.getElementById('popup').style.display = 'block';
+                });
+        }
+        
+        document.getElementById('close-popup').onclick = function() {
+            document.getElementById('popup-overlay').style.display = 'none';
+            document.getElementById('popup').style.display = 'none';
+        }
+        
+        window.onclick = function(event) {
+            if (event.target == document.getElementById('popup-overlay')) {
+                document.getElementById('popup-overlay').style.display = 'none';
+                document.getElementById('popup').style.display = 'none';
+            }
+        }
+        </script>
+        
+        
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="footer">
+        <div class="page-container footer-container">
+            <div class="footer-copyright">
+                <p>© Department of Academic Affairs- CHANDIGARH UNIVERSITY <br>
+                    Supported By- <a href="https://www.instagram.com/cac.cuchd/">Connecting All Circles</a><br>
+                    Developer: <a href="https://www.linkedin.com/in/shivansh-tiwari-48894924a/"> Shivansh Tiwari</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- The Modal -->
+    <div id="imageModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <img src="img/result.jpg" alt="Sample Image" class="modal-image">
+            <br>
+            <br>
+            <p class="modal-text"><b>NOTE: </b> All details will be shared to shortlisted candidate for above entities on respective mails. <br><b>For more information contact</b> Kunal- <a href="tel:+919896972272">+919896972272</a>
+            </p>
+            </p>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script>
+        // Get the modal
+        var modal = document.getElementById("imageModal");
+        var btn = document.getElementById("showResultBtn");
+        var span = document.getElementById("closeModal"); 
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        // Function to toggle FAQ popup
+        function toggleFAQPopup() {
+            var faqPopup = document.getElementById("faqPopup");
+            faqPopup.style.display = (faqPopup.style.display === "none" || faqPopup.style.display === "") ? "block" : "none";
+        }
+        function openExcel(file) {
+            fetch(file)
+                .then(response => response.arrayBuffer())
+                .then(data => {
+                    const workbook = XLSX.read(data, {type: 'array'});
+                    const sheetName = workbook.SheetNames[0];
+                    const sheet = workbook.Sheets[sheetName];
+                    const html = XLSX.utils.sheet_to_html(sheet);
+                    document.getElementById('popup-content').innerHTML = html;
+                    document.getElementById('popup-overlay').style.display = 'block';
+                    document.getElementById('popup').style.display = 'block';
+                });
+        }
+        
+        document.getElementById('close-popup').onclick = function() {
+            document.getElementById('popup-overlay').style.display = 'none';
+            document.getElementById('popup').style.display = 'none';
+        }
+        
+        window.onclick = function(event) {
+            if (event.target == document.getElementById('popup-overlay')) {
+                document.getElementById('popup-overlay').style.display = 'none';
+                document.getElementById('popup').style.display = 'none';
+            }
+        }
+    </script>
+
+</body>
+
+</html>
