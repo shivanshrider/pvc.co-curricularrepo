@@ -885,6 +885,8 @@ tbody tr.hide td img {
 
 .status.pending {
   background-color: #ebc474;
+  colour: #006b21
+
 }
 
 .status.shipped {
